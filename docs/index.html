@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peter Cox — CV | Intelligence Manager</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0D1B3E;
+    --navy-2:#141f47;
+    --cyan:#0096C7;
+    --cyan-l:#00B4D8;
+    --mid:#023E8A;
+    --pale:#E8F0FE;
+    --ink:#1A1A2E;
+    --grey:#5b6476;
+    --lgrey:#F0F4F8;
+    --line:#dfe6f0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Barlow',-apple-system,Segoe UI,sans-serif;
+    color:var(--ink);
+    background:#fbfcfe;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px;}
+
+  /* ===== Hero ===== */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,#10204d 55%,var(--mid) 100%);
+    color:#fff;position:relative;overflow:hidden;
+  }
+  .hero::before,.hero::after{
+    content:"";position:absolute;background:rgba(0,150,199,.35);
+    transform:rotate(15deg);pointer-events:none;
+  }
+  .hero::before{width:260px;height:90px;right:-40px;bottom:60px;}
+  .hero::after{width:180px;height:70px;right:120px;bottom:20px;transform:rotate(-10deg);background:rgba(0,180,216,.28);}
+  .hero-inner{padding:64px 0 56px;position:relative;z-index:2;display:flex;flex-wrap:wrap;gap:40px;align-items:flex-end;}
+  .avatar{
+    flex:none;width:210px;height:210px;border-radius:50%;
+    border:5px solid rgba(0,180,216,.55);box-shadow:0 12px 30px rgba(0,0,0,.35);
+    object-fit:cover;background:#fff;
+  }
+  .hero-left{flex:1 1 340px;min-width:280px;}
+  .eyebrow{
+    font-family:'Barlow Condensed',sans-serif;letter-spacing:.22em;
+    text-transform:uppercase;font-size:13px;color:var(--cyan-l);margin-bottom:14px;
+  }
+  .hero h1{font-size:52px;line-height:1;font-weight:800;letter-spacing:-.5px;}
+  .accent-bar{width:72px;height:4px;background:var(--cyan);margin:18px 0 20px;border-radius:2px;}
+  .hero .role{font-size:20px;font-weight:600;color:#cfe6ff;margin-bottom:14px;}
+  .hero .intro{font-size:16.5px;color:#e6eefb;max-width:560px;font-weight:400;}
+  .hero-right{flex:1 1 300px;min-width:240px;}
+  .contact-card{
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:12px;padding:20px 22px;backdrop-filter:blur(4px);
+  }
+  .contact-card h4{font-family:'Barlow Condensed',sans-serif;letter-spacing:.16em;font-size:12px;text-transform:uppercase;color:var(--cyan-l);margin-bottom:12px;}
+  .contact-row{display:flex;align-items:center;gap:10px;font-size:15px;color:#fff;padding:6px 0;border-top:1px solid rgba(255,255,255,.09);}
+  .contact-row:first-of-type{border-top:none;}
+  .contact-row .ico{color:var(--cyan-l);font-weight:700;width:20px;text-align:center;}
+
+  /* ===== Stat strip ===== */
+  .stats{background:#fff;border-bottom:1px solid var(--line);}
+  .stats-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:26px 0;}
+  .stat{padding:6px 18px;border-left:1px solid var(--line);}
+  .stat:first-child{border-left:none;}
+  .stat .num{font-size:30px;font-weight:800;color:var(--cyan);line-height:1;}
+  .stat .lbl{font-size:13px;color:var(--grey);margin-top:6px;}
+
+  /* ===== Sections ===== */
+  section{padding:46px 0 8px;}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:26px;}
+  .sec-head .bar{width:40px;height:4px;background:var(--cyan);border-radius:2px;flex:none;align-self:center;}
+  .sec-head h2{font-size:24px;font-weight:700;color:var(--navy);letter-spacing:-.3px;}
+  .sec-head .sub{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.14em;font-size:12px;color:var(--grey);}
+
+  /* ===== Skills chips ===== */
+  .chips{display:flex;flex-wrap:wrap;gap:10px;}
+  .chip{
+    background:var(--pale);color:var(--navy);border:1px solid #cfddf5;
+    padding:9px 16px;border-radius:999px;font-weight:600;font-size:14.5px;
+    transition:.18s;
+  }
+  .chip:hover{background:var(--cyan);color:#fff;border-color:var(--cyan);}
+  .chip .dot{color:var(--cyan);font-weight:800;margin-right:6px;}
+
+  /* ===== Experience timeline ===== */
+  .timeline{position:relative;padding-left:26px;}
+  .timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line);}
+  .job{position:relative;margin-bottom:30px;}
+  .job .pin{
+    position:absolute;left:-26px;top:6px;width:16px;height:16px;border-radius:50%;
+    background:#fff;border:4px solid var(--cyan);
+  }
+  .job-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;}
+  .job-head .title{font-size:19px;font-weight:700;color:var(--navy);}
+  .job-head .org{font-size:15px;font-weight:600;color:var(--cyan);}
+  .job-head .date{
+    margin-left:auto;font-family:'Barlow Condensed',sans-serif;font-size:14px;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--grey);white-space:nowrap;
+  }
+  .job .dept{font-size:13.5px;color:var(--grey);margin:3px 0 10px;font-weight:500;}
+  .job ul{list-style:none;}
+  .job li{position:relative;padding:4px 0 4px 22px;font-size:15px;color:#34405a;}
+  .job li::before{content:"";position:absolute;left:8px;top:13px;width:6px;height:6px;background:var(--cyan);border-radius:2px;}
+  .job .tag{
+    display:inline-block;background:var(--pale);color:var(--mid);font-size:12px;font-weight:600;
+    padding:2px 10px;border-radius:999px;margin-left:4px;vertical-align:middle;
+  }
+
+  /* ===== Achievements ===== */
+  .ach-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .ach{
+    background:#fff;border:1px solid var(--line);border-top:4px solid var(--cyan);
+    border-radius:12px;padding:22px 22px 20px;transition:.2s;
+  }
+  .ach:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(13,27,62,.08);}
+  .ach .num{font-size:13px;font-weight:700;color:var(--cyan-l);font-family:'Barlow Condensed',sans-serif;letter-spacing:.12em;}
+  .ach h3{font-size:17px;font-weight:700;color:var(--navy);margin:4px 0 8px;}
+  .ach .org{font-size:12.5px;color:var(--cyan);font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:.04em;}
+  .ach p{font-size:14.5px;color:#42506a;}
+
+  /* ===== Education / training grid ===== */
+  .edu-card{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .edu{
+    background:var(--lgrey);border-radius:12px;padding:20px 22px;border:1px solid var(--line);
+  }
+  .edu .year{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;color:var(--cyan);letter-spacing:.05em;}
+  .edu h3{font-size:16.5px;font-weight:700;color:var(--navy);margin:6px 0 10px;line-height:1.3;}
+  .edu .inst{font-size:13.5px;font-weight:600;color:var(--mid);}
+
+  .train{background:#fff;border-left:4px solid var(--cyan-l);border-radius:0 10px 10px 0;padding:14px 18px;}
+  .train + .train{margin-top:12px;}
+  .train h4{font-size:15.5px;font-weight:700;color:var(--navy);}
+  .train .who{font-size:13px;color:var(--cyan);font-weight:600;margin:2px 0 6px;}
+  .train p{font-size:14px;color:#42506a;}
+
+  /* ===== Training delivery ===== */
+  .deliver{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
+  .deliver span{background:#fff;border:1px solid var(--line);color:var(--navy);font-weight:600;font-size:14px;padding:9px 15px;border-radius:10px;}
+
+  /* ===== Referee ===== */
+  .ref{background:linear-gradient(120deg,var(--navy),var(--mid));border-radius:14px;color:#fff;padding:26px 30px;display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:30px;}
+  .ref .who{font-weight:700;font-size:18px;}
+  .ref .role{font-size:14px;color:#cfe6ff;}
+  .ref .mail{margin-left:auto;color:var(--cyan-l);font-weight:600;font-size:15px;}
+
+  footer{border-top:1px solid var(--line);padding:26px 0 40px;text-align:center;color:var(--grey);font-size:13px;background:#fff;}
+
+  @media(max-width:760px){
+    .stats-inner{grid-template-columns:1fr 1fr;gap:16px 0;}
+    .stat{border-left:none;border-top:1px solid var(--line);padding:12px 4px;}
+    .stat:nth-child(-n+2){border-top:none;}
+    .ach-grid,.edu-card{grid-template-columns:1fr;}
+    .hero h1{font-size:40px;}
+    .job-head .date{margin-left:0;}
+    .ref .mail{margin-left:0;}
+  }
+  @media print{
+    body{background:#fff;}
+    .hero{background:var(--navy);}
+    section{padding:20px 0 4px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-inner">
+    <img src="peter-cox.png" alt="Peter Cox" class="avatar" loading="lazy">
+    <div class="hero-left">
+      <div class="eyebrow">Curriculum Vitae · Intelligence &amp; Regulatory Analysis</div>
+      <h1>Peter Cox</h1>
+      <div class="accent-bar"></div>
+      <div class="role">Senior Manager, Assessments — CyberCX</div>
+      <p class="intro">Leading cyber intelligence that empowers customers to defend themselves in the cyber domain. Passionate about developing high-performing, diverse teams and leveraging intelligence for real impact.</p>
+    </div>
+    <div class="hero-right">
+      <div class="contact-card">
+        <h4>Contact</h4>
+        <div class="contact-row"><span class="ico">✉</span><span>peterjaycox@me.com</span></div>
+        <div class="contact-row"><span class="ico">◎</span><span>NSW, Australia</span></div>
+        <div class="contact-row"><span class="ico">✓</span><span>CyberCX · NSW Police Force · DCS / Fair Trading · UNSW · Macquarie</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STATS -->
+<div class="stats"><div class="wrap">
+  <div class="stats-inner">
+    <div class="stat"><div class="num">8</div><div class="lbl">Hours saved / day via automation project</div></div>
+    <div class="stat"><div class="num">9+</div><div class="lbl">Years in intelligence &amp; data roles</div></div>
+    <div class="stat"><div class="num">2</div><div class="lbl">Masters degrees — security &amp; intel</div></div>
+  </div>
+</div></div>
+
+<!-- EXPERIENCE -->
+<section id="experience"><div class="wrap">
+  <div class="sec-head"><div class="bar"></div><div><h2>Professional Experience</h2><div class="sub">2016 — present</div></div></div>
+  <div class="timeline">
+
+    <div class="job">
+      <div class="pin"></div>
+      <div class="job-head">
+        <span class="title">Senior Manager, Assessments</span>
+        <span class="org">CyberCX</span>
+        <span class="date">Jul 2026 — Present</span>
+      </div>
+      <div class="dept">Assessments · Cyber Intelligence</div>
+      <ul>
+        <li>Lead the Assessments team delivering strategic cyber intelligence products that empower customers to defend themselves in the cyber domain.</li>
+        <li>Deliver engaging cyber security intelligence that informs customer decision-making across a client-facing commercial consultancy portfolio.</li>
+        <li>Build a diverse and resilient team of analysts; mentor and develop individual and team capability.</li>
+        <li>Drive continuous improvement in the project management of cyber intelligence deliverables.</li>
+        <li>Balance client-facing commercial delivery with a strong operational focus across the function.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="pin"></div>
+      <div class="job-head">
+        <span class="title">Intelligence Manager</span>
+        <span class="org">NSW Fair Trading</span>
+        <span class="date">Apr 2023 — Jun 2026</span>
+      </div>
+      <div class="dept">Regulatory Intelligence, Data &amp; Reporting</div>
+      <ul>
+        <li>Lead and manage a multidisciplinary team of 14 regulatory intelligence analysts, delivering critical operational and strategic intelligence to inform decision-making across NSW Fair Trading.</li>
+        <li>Continual development of intelligence capability in the regulatory intelligence environment.</li>
+        <li>Procurement of intelligence tools.</li>
+        <li>Engage and maintain a diverse network of counterparts across Federal and State governments, as well as academia.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="pin"></div>
+      <div class="job-head">
+        <span class="title">Principal Intelligence Analyst</span>
+        <span class="org">NSW Fair Trading <span class="tag">DCS · Better Regulation</span></span>
+        <span class="date">Apr 2021 — Apr 2023</span>
+      </div>
+      <div class="dept">Data, Intelligence &amp; Analytics</div>
+      <ul>
+        <li>Produce high-quality, complex regulatory intelligence products primarily related to the NSW building industry.</li>
+        <li>Lead a capable team of analysts within the Better Regulation Division, with a focus on sensitive investigations.</li>
+        <li>Engage with a broad range of stakeholders across government; prioritise team well-being and professional development through targeted training programs.</li>
+        <li>Manage strict deadlines and triage high volumes of work, including Ministerial and executive requests; communicate recommendations on targeting, licencing, policy and legislation to senior decision-makers.</li>
+        <li>Lead projects and manage budgets, resulting in savings for the people of NSW; participate in working groups supporting legislative reform.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="pin"></div>
+      <div class="job-head">
+        <span class="title">A/Team Leader — Predictive Crime Team</span>
+        <span class="org">NSW Police Force</span>
+        <span class="date">Oct 2019 — Jun 2020</span>
+      </div>
+      <div class="dept">State Intelligence Command <span class="tag">Data Science</span></div>
+      <ul>
+        <li>Guide the establishment of the first data science team within State Intelligence.</li>
+        <li>Manage a highly skilled team working on image classification, time-series analysis, clustering and profiling; build custom Power BI dashboards delivering real-time access to actionable data.</li>
+        <li>Negotiate software licencing agreements with commercial agents, consulting internal units including the Office of the General Counsel and Strategic Procurement.</li>
+        <li>Conduct data collection, transformation and validation with Microsoft SQL Server and Excel; research latest developments in predictive policing and criminology.</li>
+        <li>Establish working relationships with counterparts across all Australian states and territories, contributing to a data science community of practice for the NSWPF.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="pin"></div>
+      <div class="job-head">
+        <span class="title">Senior Intelligence Analyst</span>
+        <span class="org">NSW Police Force</span>
+        <span class="date">Mar 2017 — Sep 2019</span>
+      </div>
+      <div class="dept">Real Time Intelligence Centre <span class="tag">Tactical</span></div>
+      <ul>
+        <li>Provide immediate tactical intelligence support for major crimes, including homicides, shootings and kidnappings, in early-stage investigations and suppression activities.</li>
+        <li>Solve complex problems using analyst notebook, closed and open-source databases, and structured analytical techniques.</li>
+        <li>Maintain accurate database records of daily policing operations and generate reports for key stakeholders.</li>
+        <li>Manage multiple critical tasks under pressure; undertake induction and training of new members, building a capable, enthusiastic team dynamic.</li>
+      </ul>
+    </div>
+
+  </div>
+</div></section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements"><div class="wrap">
+  <div class="sec-head"><div class="bar"></div><div><h2>Key Achievements</h2><div class="sub">Selected highlights across NSW public sector</div></div></div>
+  <div class="ach-grid">
+    <div class="ach"><div class="num">01</div><h3>Managing Through Change</h3><div class="org">DCS · NSW Fair Trading</div><p>Led a regulatory intelligence team through major change — Machinery of Government changes and a functional review — using tactical empathy, clear communication and acknowledging the team's experience while highlighting the vision.</p></div>
+    <div class="ach"><div class="num">02</div><h3>Automation Project</h3><div class="org">DCS · NSW Fair Trading</div><p>Developed a business case and implemented an automation solution for a high-volume repetitive task, saving the team up to <strong>8 hours a day</strong>.</p></div>
+    <div class="ach"><div class="num">03</div><h3>Intelligence Product Review &amp; Redesign</h3><div class="org">DCS · NSW Fair Trading</div><p>Completed a full review of Data, Intelligence &amp; Analytics products, improving the look, utility and recognisability of reporting and strengthening organisational impact.</p></div>
+    <div class="ach"><div class="num">04</div><h3>Major Incident Intelligence Group (MIIG)</h3><div class="org">NSW Police Force</div><p>Contributed to a new model for intelligence responses to major incidents in NSW, implemented the concept and trained the MIIG model to intelligence analysts across the force.</p></div>
+    <div class="ach"><div class="num">05</div><h3>Public Place Shooting Collection &amp; Analysis</h3><div class="org">NSW Police Force</div><p>Improved reporting capacity of the Public Place Shooting Database and developed a Power BI dashboard for easy access to shooting-related conflict data.</p></div>
+  </div>
+</div></section>
+
+<!-- EDUCATION -->
+<section id="education"><div class="wrap">
+  <div class="sec-head"><div class="bar"></div><div><h2>Education</h2><div class="sub">Qualifications</div></div></div>
+  <div class="edu-card">
+    <div class="edu"><div class="year">2016</div><h3>Master of Policing, Intelligence &amp; Counter-Terrorism<br>&amp; Master of International Security Studies</h3><div class="inst">Macquarie University</div></div>
+    <div class="edu"><div class="year">2019</div><h3>Diploma of Police Intelligence Practice</h3><div class="inst">NSW Police</div></div>
+    <div class="edu"><div class="year">2013</div><h3>Bachelor of Arts — International &amp; Political Studies</h3><div class="inst">UNSW</div></div>
+  </div>
+</div></section>
+
+<!-- PROFESSIONAL DEVELOPMENT -->
+<section id="development"><div class="wrap">
+  <div class="sec-head"><div class="bar"></div><div><h2>Professional Development</h2><div class="sub">Recent &amp; ongoing learning</div></div></div>
+  <div>
+    <div class="train"><h4>Intelligence in Regulation</h4><div class="who">ANZSOG · delivered by Neil Quarmby</div><p>Comprehensive understanding of the role and application of intelligence in regulation — contemporary regulatory models, strategic/operational/tactical considerations, public value, organisational culture, and the impact of intelligence on regulator efficiency and foresight.</p></div>
+    <div class="train"><h4>The Professional Regulator</h4><div class="who">ANZSOG</div><p>A practical six-module online programme providing a common foundation of current, modern regulatory practice for regulators across Australia, plus a series of six supporting seminars.</p></div>
+    <div class="train"><h4>The Complete SQL Bootcamp</h4><div class="who">Online · Udemy</div><p>SQL syntax, aggregate functions, advanced string and comparison queries, logical operators, JOINs, constraints and database design, with Python integration for advanced skills.</p></div>
+    <div class="train"><h4>Automate the Boring Stuff with Python</h4><div class="who">Online · Udemy</div><p>Practical automation — web scraping, parsing PDFs and Excel spreadsheets, automating the keyboard and mouse, and sending emails and texts.</p></div>
+  </div>
+</div></section>
+
+<!-- REFEREE -->
+<section id="referee"><div class="wrap">
+  <div class="sec-head"><div class="bar"></div><div><h2>Referee</h2><div class="sub">Available on request</div></div></div>
+  <div class="ref">
+    <div>
+      <div class="who">Available upon request</div>
+      <div class="role">Professional referees supplied following initial contact</div>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="wrap">© Peter Cox · Curriculum Vitae · Intelligence &amp; Regulatory Analysis · NSW, Australia</div>
+</footer>
+
+</body>
+</html>
