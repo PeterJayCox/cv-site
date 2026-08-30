@@ -77,14 +77,6 @@
   .copy-btn:hover{background:var(--cyan);color:#fff;}
   .copy-btn.copied{background:#2dc653;border-color:#2dc653;color:#fff;}
 
-  /* ===== Stat strip ===== */
-  .stats{background:#fff;border-bottom:1px solid var(--line);}
-  .stats-inner{display:grid;grid-template-columns:repeat(3,1fr);gap:0;padding:26px 0;}
-  .stat{padding:6px 18px;border-left:1px solid var(--line);}
-  .stat:first-child{border-left:none;}
-  .stat .num{font-size:30px;font-weight:800;color:var(--cyan);line-height:1;}
-  .stat .lbl{font-size:13px;color:var(--grey);margin-top:6px;}
-
   /* ===== Sections ===== */
   section{padding:46px 0 8px;}
   .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:26px;}
@@ -166,9 +158,6 @@
   footer{border-top:1px solid var(--line);padding:26px 0 40px;text-align:center;color:var(--grey);font-size:13px;background:#fff;}
 
   @media(max-width:760px){
-    .stats-inner{grid-template-columns:1fr 1fr;gap:16px 0;}
-    .stat{border-left:none;border-top:1px solid var(--line);padding:12px 4px;}
-    .stat:nth-child(-n+2){border-top:none;}
     .ach-grid,.edu-card{grid-template-columns:1fr;}
     .hero h1{font-size:40px;}
     .job-head .date{margin-left:0;}
@@ -206,14 +195,7 @@
   </div>
 </header>
 
-<!-- STATS -->
-<div class="stats"><div class="wrap">
-  <div class="stats-inner">
-    <div class="stat"><div class="num">8</div><div class="lbl">Hours saved / day via automation project</div></div>
-    <div class="stat"><div class="num">9+</div><div class="lbl">Years in intelligence &amp; data roles</div></div>
-    <div class="stat"><div class="num">2</div><div class="lbl">Masters degrees — security &amp; intel</div></div>
-  </div>
-</div></div>
+
 
 <!-- EXPERIENCE -->
 <section id="experience"><div class="wrap">
