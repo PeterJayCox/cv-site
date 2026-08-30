@@ -67,6 +67,15 @@
   .contact-row{display:flex;align-items:center;gap:10px;font-size:15px;color:#fff;padding:6px 0;border-top:1px solid rgba(255,255,255,.09);}
   .contact-row:first-of-type{border-top:none;}
   .contact-row .ico{color:var(--cyan-l);font-weight:700;width:20px;text-align:center;}
+  .contact-label{font-family:'Barlow Condensed',sans-serif;letter-spacing:.14em;text-transform:uppercase;font-size:10.5px;color:var(--cyan-l);font-weight:600;margin-right:9px;}
+  .copy-btn{
+    margin-left:auto;background:rgba(0,180,216,.14);border:1px solid rgba(0,180,216,.5);
+    color:var(--cyan-l);font-family:'Barlow Condensed',sans-serif;letter-spacing:.1em;
+    text-transform:uppercase;font-size:11px;font-weight:600;padding:3px 11px;
+    border-radius:999px;cursor:pointer;transition:.18s;white-space:nowrap;flex:none;
+  }
+  .copy-btn:hover{background:var(--cyan);color:#fff;}
+  .copy-btn.copied{background:#2dc653;border-color:#2dc653;color:#fff;}
 
   /* ===== Stat strip ===== */
   .stats{background:#fff;border-bottom:1px solid var(--line);}
@@ -188,9 +197,10 @@
     <div class="hero-right">
       <div class="contact-card">
         <h4>Contact</h4>
-        <div class="contact-row"><span class="ico">✉</span><span>peterjaycox@me.com</span></div>
+        <div class="contact-row"><span class="ico">✉</span><span>peterjaycox@me.com</span><button class="copy-btn" type="button" onclick="copyEmail(this)" aria-label="Copy email address">Copy</button></div>
         <div class="contact-row"><span class="ico">◎</span><span>NSW, Australia</span></div>
-        <div class="contact-row"><span class="ico">✓</span><span>CyberCX · NSW Police Force · DCS / Fair Trading · UNSW · Macquarie</span></div>
+        <div class="contact-row"><span class="ico">✓</span><span><span class="contact-label">Work</span>CyberCX · DCS / Fair Trading · NSW Police</span></div>
+        <div class="contact-row"><span class="ico">✓</span><span><span class="contact-label">Education</span>Macquarie University · University of New South Wales</span></div>
       </div>
     </div>
   </div>
@@ -255,7 +265,7 @@
         <li>Produce high-quality, complex regulatory intelligence products primarily related to the NSW building industry.</li>
         <li>Lead a capable team of analysts within the Better Regulation Division, with a focus on sensitive investigations.</li>
         <li>Engage with a broad range of stakeholders across government; prioritise team well-being and professional development through targeted training programs.</li>
-        <li>Manage strict deadlines and triage high volumes of work, including Ministerial and executive requests; communicate recommendations on targeting, licencing, policy and legislation to senior decision-makers.</li>
+        <li>Manage strict deadlines and triage high volumes of work, including Ministerial and executive requests; communicate recommendations on targeting, licensing, policy and legislation to senior decision-makers.</li>
         <li>Lead projects and manage budgets, resulting in savings for the people of NSW; participate in working groups supporting legislative reform.</li>
       </ul>
     </div>
@@ -271,7 +281,7 @@
       <ul>
         <li>Guide the establishment of the first data science team within State Intelligence.</li>
         <li>Manage a highly skilled team working on image classification, time-series analysis, clustering and profiling; build custom Power BI dashboards delivering real-time access to actionable data.</li>
-        <li>Negotiate software licencing agreements with commercial agents, consulting internal units including the Office of the General Counsel and Strategic Procurement.</li>
+        <li>Negotiate software licensing agreements with commercial agents, consulting internal units including the Office of the General Counsel and Strategic Procurement.</li>
         <li>Conduct data collection, transformation and validation with Microsoft SQL Server and Excel; research latest developments in predictive policing and criminology.</li>
         <li>Establish working relationships with counterparts across all Australian states and territories, contributing to a data science community of practice for the NSWPF.</li>
       </ul>
@@ -303,7 +313,7 @@
     <div class="ach"><div class="num">01</div><h3>Managing Through Change</h3><div class="org">DCS · NSW Fair Trading</div><p>Led a regulatory intelligence team through major change — Machinery of Government changes and a functional review — using tactical empathy, clear communication and acknowledging the team's experience while highlighting the vision.</p></div>
     <div class="ach"><div class="num">02</div><h3>Automation Project</h3><div class="org">DCS · NSW Fair Trading</div><p>Developed a business case and implemented an automation solution for a high-volume repetitive task, saving the team up to <strong>8 hours a day</strong>.</p></div>
     <div class="ach"><div class="num">03</div><h3>Intelligence Product Review &amp; Redesign</h3><div class="org">DCS · NSW Fair Trading</div><p>Completed a full review of Data, Intelligence &amp; Analytics products, improving the look, utility and recognisability of reporting and strengthening organisational impact.</p></div>
-    <div class="ach"><div class="num">04</div><h3>Major Incident Intelligence Group (MIIG)</h3><div class="org">NSW Police Force</div><p>Contributed to a new model for intelligence responses to major incidents in NSW, implemented the concept and trained the MIIG model to intelligence analysts across the force.</p></div>
+    <div class="ach"><div class="num">04</div><h3>Major Incident Intelligence Group (MIIG)</h3><div class="org">NSW Police Force</div><p>Contributed to a new model for intelligence responses to major incidents in NSW, implemented the concept and trained intelligence analysts across the force in the MIIG model.</p></div>
     <div class="ach"><div class="num">05</div><h3>Public Place Shooting Collection &amp; Analysis</h3><div class="org">NSW Police Force</div><p>Improved reporting capacity of the Public Place Shooting Database and developed a Power BI dashboard for easy access to shooting-related conflict data.</p></div>
   </div>
 </div></section>
@@ -312,7 +322,8 @@
 <section id="education"><div class="wrap">
   <div class="sec-head"><div class="bar"></div><div><h2>Education</h2><div class="sub">Qualifications</div></div></div>
   <div class="edu-card">
-    <div class="edu"><div class="year">2016</div><h3>Master of Policing, Intelligence &amp; Counter-Terrorism<br>&amp; Master of International Security Studies</h3><div class="inst">Macquarie University</div></div>
+    <div class="edu"><div class="year">2016</div><h3>Master of Policing, Intelligence &amp; Counter-Terrorism</h3><div class="inst">Macquarie University</div></div>
+    <div class="edu"><div class="year">2016</div><h3>Master of International Security Studies</h3><div class="inst">Macquarie University</div></div>
     <div class="edu"><div class="year">2019</div><h3>Diploma of Police Intelligence Practice</h3><div class="inst">NSW Police</div></div>
     <div class="edu"><div class="year">2013</div><h3>Bachelor of Arts — International &amp; Political Studies</h3><div class="inst">UNSW</div></div>
   </div>
@@ -344,5 +355,27 @@
   <div class="wrap">© Peter Cox · Curriculum Vitae · Intelligence &amp; Regulatory Analysis · NSW, Australia</div>
 </footer>
 
+<script>
+  function copyEmail(btn){
+    var email = "peterjaycox@me.com";
+    function done(){
+      btn.textContent = "Copied!";
+      btn.classList.add("copied");
+      setTimeout(function(){ btn.textContent = "Copy"; btn.classList.remove("copied"); }, 1800);
+    }
+    if (navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(email).then(done).catch(function(){ fallbackCopy(email); done(); });
+    } else {
+      fallbackCopy(email); done();
+    }
+  }
+  function fallbackCopy(text){
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); } catch(e){}
+    document.body.removeChild(ta);
+  }
+</script>
 </body>
 </html>
